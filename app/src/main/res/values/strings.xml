@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project_RxJava_api_calling</string>
+    <string name="app_name">Gallery</string>
     <string name="todo">TODO</string>
     <string name="textview">TextView</string>
     <string name="swipe">swipe</string>

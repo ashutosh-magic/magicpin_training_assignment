@@ -16,7 +16,8 @@
         <activity
             android:name=".PagerActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:label="FULL MODE"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

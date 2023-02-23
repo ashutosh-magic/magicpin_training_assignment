@@ -22,11 +22,11 @@ class ViewPageAdapter(private val mContext:Context,private val imglist: List<Ima
         val view = layoutInflater!!.inflate(R.layout.activity_pager_item, container, false)
         val item=imglist[position]
         val pagerImage:ImageView=view.findViewById(R.id.image_pager)
-        val textViewPager1:TextView=view.findViewById(R.id.textViewPager1)
-        val textViewPager2:TextView=view.findViewById(R.id.textViewPager2)
-
-        textViewPager1.text=item.id
-        textViewPager2.text=item.author
+//        val textViewPager1:TextView=view.findViewById(R.id.textViewPager1)
+//        val textViewPager2:TextView=view.findViewById(R.id.textViewPager2)
+//
+//        textViewPager1.text=item.id
+//        textViewPager2.text=item.author
         Glide.with(mContext)
             .load(item.download_url)
             .into(pagerImage)

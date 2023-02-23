@@ -4,73 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3700BCD4"
+    android:background="#0B0101"
     tools:context=".PagerActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="358dp"
-        android:layout_height="578dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/swipe_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/image_pager"
-            android:layout_width="match_parent"
-            android:layout_height="365dp"
-            android:layout_margin="10dp"
-            tools:srcCompat="@tools:sample/avatars"
-            android:contentDescription="@string/todo" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewPager1"
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:layout_margin="20dp"
-                android:background="#72DCF10B"
-                android:backgroundTint="#8D7BBA70"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/textview"
-                android:textColor="#00695C" />
-
-            <TextView
-                android:id="@+id/textViewPager2"
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:layout_margin="20dp"
-                android:background="#72DCF10B"
-                android:backgroundTint="#8D7BBA70"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/textview"
-                android:textColor="#00695C" />
-        </LinearLayout>
-
-    </LinearLayout>
-    <Button
-        android:id="@+id/swipe_button"
-        android:layout_width="109dp"
-        android:layout_height="61dp"
-        android:backgroundTint="@color/swipe_button_color"
-        android:contextClickable="false"
-        android:gravity="clip_horizontal|center"
-        android:text="@string/swipe"
-        android:textColor="#0288D1"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/image_pager"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewPager1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:background="#72DCF10B"-->
+<!--        android:backgroundTint="#8D7BBA70"-->
+<!--        android:fontFamily="sans-serif-smallcaps"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="@string/textview"-->
+<!--        android:textColor="#00695C"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewPager2" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewPager2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="47dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:background="#72DCF10B"-->
+<!--        android:backgroundTint="#8D7BBA70"-->
+<!--        android:fontFamily="sans-serif-smallcaps"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="@string/textview"-->
+<!--        android:textColor="#00695C"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/image_pager" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
