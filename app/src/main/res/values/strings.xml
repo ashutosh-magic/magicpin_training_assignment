@@ -5,4 +5,6 @@
     <string name="swipe">swipe</string>
     <string name="loading">loading</string>
     <string name="img_id">img_id</string>
+    <string name="index">index</string>
+    <string name="author">author</string>
 </resources>

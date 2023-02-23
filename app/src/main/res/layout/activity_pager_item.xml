@@ -17,47 +17,75 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textViewPager1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:background="#72DCF10B"-->
-<!--        android:backgroundTint="#8D7BBA70"-->
-<!--        android:fontFamily="sans-serif-smallcaps"-->
-<!--        android:gravity="center"-->
-<!--        android:padding="10dp"-->
-<!--        android:text="@string/textview"-->
-<!--        android:textColor="#00695C"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewPager2" />-->
+    <TextView
+        android:id="@+id/textViewPager1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:alpha="@dimen/material_emphasis_high_type"
+        android:text="@string/index"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/image_pager"
+        app:layout_constraintTop_toTopOf="@+id/image_pager" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textViewPager2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="47dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:background="#72DCF10B"-->
-<!--        android:backgroundTint="#8D7BBA70"-->
-<!--        android:fontFamily="sans-serif-smallcaps"-->
-<!--        android:gravity="center"-->
-<!--        android:padding="10dp"-->
-<!--        android:text="@string/textview"-->
-<!--        android:textColor="#00695C"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/image_pager" />-->
+    <TextView
+        android:id="@+id/textViewPager2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="@dimen/material_emphasis_high_type"
+        android:text="@string/author"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_pager"
+        app:layout_constraintEnd_toEndOf="@+id/image_pager" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewPager1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        android:background="#72DCF10B"-->
+    <!--        android:backgroundTint="#8D7BBA70"-->
+    <!--        android:fontFamily="sans-serif-smallcaps"-->
+    <!--        android:gravity="center"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:text="@string/textview"-->
+    <!--        android:textColor="#00695C"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textViewPager2" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textViewPager2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="47dp"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        android:background="#72DCF10B"-->
+    <!--        android:backgroundTint="#8D7BBA70"-->
+    <!--        android:fontFamily="sans-serif-smallcaps"-->
+    <!--        android:gravity="center"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:text="@string/textview"-->
+    <!--        android:textColor="#00695C"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/image_pager" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
