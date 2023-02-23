@@ -30,10 +30,10 @@ class PagerActivity : AppCompatActivity() {
         mViewPagerAdapter.notifyDataSetChanged()
 //        Log.d("mydata",myData.toString())
         val currPage=myData.id?.toInt()
-        while (currPage != null && currPage > (viewPager.adapter?.count ?: 0)) {
-            // Sleep for some time to avoid excessive CPU usage
-            Thread.sleep(100)
-        }
+//        while (currPage != null && currPage > (viewPager.adapter?.count ?: 0)) {
+//            // Sleep for some time to avoid excessive CPU usage
+//            Thread.sleep(100)
+//        }
         viewPager.post {
             if (currPage != null) {
                 viewPager.setCurrentItem(currPage, false)
