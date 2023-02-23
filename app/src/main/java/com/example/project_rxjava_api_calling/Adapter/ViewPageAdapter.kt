@@ -1,4 +1,4 @@
-package com.example.project_rxjava_api_calling.adapter
+package com.example.project_rxjava_api_calling.Adapter
 
 import android.content.Context
 import android.util.Log
@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
-import com.example.project_rxjava_api_calling.model.ImageModelItem
+import com.example.project_rxjava_api_calling.Model.ImageModelItem
 import com.example.project_rxjava_api_calling.R
 
 class ViewPageAdapter(private val mContext:Context,private val imglist: List<ImageModelItem>): PagerAdapter() {

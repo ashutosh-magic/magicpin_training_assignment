@@ -10,8 +10,8 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.project_rxjava_api_calling.adapter.ImgAdapter
-import com.example.project_rxjava_api_calling.model.ImageModelItem
+import com.example.project_rxjava_api_calling.Adapter.ImgAdapter
+import com.example.project_rxjava_api_calling.Model.ImageModelItem
 import com.example.project_rxjava_api_calling.Network.Retrofit
 import com.google.gson.Gson
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
