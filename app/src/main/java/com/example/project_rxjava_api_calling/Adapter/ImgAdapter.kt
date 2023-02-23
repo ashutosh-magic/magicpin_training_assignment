@@ -27,8 +27,8 @@ class ImgAdapter(private val context: Context, private var ImgList:MutableList<I
 
     override fun onBindViewHolder(holder: ImgViewHolder, position: Int) {
         val img=ImgList[position]
-        holder.imgId.text=img.id
-        holder.name.text=img.author
+//        holder.imgId.text=img.id
+//        holder.name.text=img.author
         Glide.with(context)
             .load(img.download_url)
             .into(holder.image)
@@ -37,8 +37,8 @@ class ImgAdapter(private val context: Context, private var ImgList:MutableList<I
     }
 
     inner  class ImgViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        val name:TextView=itemView.findViewById(R.id.name)
-        val imgId: TextView =itemView.findViewById(R.id.imgId)
+//        val name:TextView=itemView.findViewById(R.id.name)
+//        val imgId: TextView =itemView.findViewById(R.id.imgId)
         val image: ImageView =itemView.findViewById(R.id.image)
     }
 

@@ -31,11 +31,7 @@ class ViewPageAdapter(private val mContext:Context,private val imglist: List<Ima
             .load(item.download_url)
             .into(pagerImage)
 
-        if (position >= container.childCount) {
-            container.addView(view)
-        } else {
-            container.addView(view, position)
-        }
+        container.addView(view)
         return view
     }
 
