@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Project_RxJava_api_calling</string>
+    <string name="todo">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="swipe">swipe</string>
+    <string name="loading">loading</string>
+    <string name="img_id">img_id</string>
+</resources>
