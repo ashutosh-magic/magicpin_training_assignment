@@ -8,10 +8,9 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.project_rxjava_api_calling.Adapter.ImgAdapter
+import com.example.project_rxjava_api_calling.adapter.ImgAdapter
 import com.example.project_rxjava_api_calling.Model.ImageModelItem
 import com.example.project_rxjava_api_calling.Network.Retrofit
 import com.google.gson.Gson
@@ -29,12 +28,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        imgAdapter = ImgAdapter(this, ArrayList()) { item ->
+        imgAdapter = ImgAdapter(this) { item ->
             showDetailsScreen(item, apiData)
         }
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.apply {
-            layoutManager = GridLayoutManager(context, 2,GridLayoutManager.VERTICAL ,false)
+            layoutManager = LinearLayoutManager(context , LinearLayoutManager.VERTICAL ,false)
             adapter = imgAdapter
         }
 
@@ -78,7 +77,9 @@ class MainActivity : AppCompatActivity() {
         Log.d("tmp", imgList.size.toString())
         if (imgList.isNotEmpty()) {
             apiData = imgList.toList()
-            ImgAdapter.setData(imgAdapter, imgList)
+            imgAdapter.setData(imgAdapter,imgList)
+
+//            ImgAdapter.setData(imgAdapter, imgList)
         }
     }
 

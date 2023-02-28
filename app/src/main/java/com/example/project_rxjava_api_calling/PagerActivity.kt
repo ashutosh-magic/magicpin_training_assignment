@@ -2,9 +2,8 @@ package com.example.project_rxjava_api_calling
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcelable
 import androidx.viewpager.widget.ViewPager
-import com.example.project_rxjava_api_calling.Adapter.ViewPageAdapter
+import com.example.project_rxjava_api_calling.adapter.ViewPageAdapter
 
 import com.example.project_rxjava_api_calling.Model.ImageModelItem
 import com.google.gson.Gson

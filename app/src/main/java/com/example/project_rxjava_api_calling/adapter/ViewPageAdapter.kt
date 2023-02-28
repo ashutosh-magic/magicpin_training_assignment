@@ -1,4 +1,4 @@
-package com.example.project_rxjava_api_calling.Adapter
+package com.example.project_rxjava_api_calling.adapter
 
 import android.content.Context
 import android.util.Log
