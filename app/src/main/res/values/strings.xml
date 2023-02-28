@@ -7,4 +7,5 @@
     <string name="img_id">img_id</string>
     <string name="index">index</string>
     <string name="author">author</string>
+    <string name="indextext">IndexText</string>
 </resources>
