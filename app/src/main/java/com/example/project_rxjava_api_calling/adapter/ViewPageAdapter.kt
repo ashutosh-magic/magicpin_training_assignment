@@ -10,29 +10,38 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.example.project_rxjava_api_calling.Model.ImageModelItem
-import com.example.project_rxjava_api_calling.R
+import com.example.project_rxjava_api_calling.databinding.ActivityPagerItemBinding
 
-class ViewPageAdapter(private val mContext:Context,private val imglist: List<ImageModelItem>): PagerAdapter() {
-
-    private var layoutInflater: LayoutInflater? = null
+class ViewPageAdapter(private val mContext: Context, private val imglist: List<ImageModelItem>) :
+    PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
 
-        layoutInflater = LayoutInflater.from(mContext)
-        val view = layoutInflater!!.inflate(R.layout.activity_pager_item, container, false)
+//        layoutInflater = LayoutInflater.from(mContext)
+//        val view = layoutInflater!!
+//            .inflate(R.layout.activity_pager_item, container, false)
+
+        val binding = ActivityPagerItemBinding
+            .inflate(LayoutInflater.from(mContext), container, false)
+
         val item=imglist[position]
-        val pagerImage:ImageView=view.findViewById(R.id.image_pager)
-        val textViewPager1:TextView=view.findViewById(R.id.textViewPager1)
-          val textViewPager2:TextView=view.findViewById(R.id.textViewPager2)
-//
+//        val pagerImage:ImageView=view.findViewById(R.id.image_pager)
+//        val textViewPager1:TextView=view.findViewById(R.id.textViewPager1)
+//        val textViewPager2:TextView=view.findViewById(R.id.textViewPager2)
+
+        val pagerImage:ImageView=binding.imagePager
+        val textViewPager1:TextView=binding.textViewPager1
+        val textViewPager2:TextView=binding.textViewPager2
+
+
         textViewPager1.text=item.id
-       textViewPager2.text=item.author
+        textViewPager2.text=item.author
         Glide.with(mContext)
             .load(item.download_url)
             .into(pagerImage)
 
-        container.addView(view)
-        return view
+        container.addView(binding.root)
+        return binding.root
     }
 
     override fun getCount(): Int {

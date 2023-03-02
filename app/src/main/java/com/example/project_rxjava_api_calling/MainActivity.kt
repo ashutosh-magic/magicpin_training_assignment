@@ -10,9 +10,10 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.project_rxjava_api_calling.adapter.ImgAdapter
 import com.example.project_rxjava_api_calling.Model.ImageModelItem
 import com.example.project_rxjava_api_calling.Network.Retrofit
+import com.example.project_rxjava_api_calling.adapter.ImgAdapter
+import com.example.project_rxjava_api_calling.databinding.ActivityMainBinding
 import com.google.gson.Gson
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
@@ -25,13 +26,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var imgAdapter: ImgAdapter
     private lateinit var apiData: List<ImageModelItem>
+    private lateinit var _binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        _binding= ActivityMainBinding.inflate(layoutInflater)
+        val view = _binding.root
+        setContentView(view)
+
         imgAdapter = ImgAdapter(this) { item ->
             showDetailsScreen(item, apiData)
         }
-        recyclerView = findViewById(R.id.recyclerView)
+//        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView=_binding.recyclerView
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context , LinearLayoutManager.VERTICAL ,false)
             adapter = imgAdapter

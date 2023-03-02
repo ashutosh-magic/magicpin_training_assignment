@@ -1,20 +1,22 @@
 package com.example.project_rxjava_api_calling
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
-import com.example.project_rxjava_api_calling.adapter.ViewPageAdapter
-
+import androidx.appcompat.app.AppCompatActivity
 import com.example.project_rxjava_api_calling.Model.ImageModelItem
+import com.example.project_rxjava_api_calling.adapter.ViewPageAdapter
+import com.example.project_rxjava_api_calling.databinding.ActivityViewPagerBinding
 import com.google.gson.Gson
 
 @Suppress("DEPRECATION")
 class PagerActivity : AppCompatActivity() {
     private val itemList: MutableList<ImageModelItem> = ArrayList()
+    private lateinit var binding: ActivityViewPagerBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_pager)
-
+//        setContentView(R.layout.activity_view_pager)
+        binding = ActivityViewPagerBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         val gson = Gson()
 
         val myData = gson.fromJson(intent.getStringExtra("item"), ImageModelItem::class.java)
@@ -25,8 +27,8 @@ class PagerActivity : AppCompatActivity() {
             itemList.addAll(parcelableList)
         }
 
-        val viewPager = findViewById<ViewPager>(R.id.viewPagerItemHolder)
-
+//        val viewPager = findViewById<ViewPager>(R.id.viewPagerItemHolder)
+        val viewPager=binding.viewPagerItemHolder
 
 //        itemList = parcelableList
         val mViewPagerAdapter = ViewPageAdapter(this, itemList)
