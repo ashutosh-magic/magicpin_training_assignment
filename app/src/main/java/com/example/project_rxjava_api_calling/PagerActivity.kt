@@ -13,40 +13,26 @@ class PagerActivity : AppCompatActivity() {
 	private lateinit var binding: ActivityViewPagerBinding
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_view_pager)
+  
 		binding = ActivityViewPagerBinding.inflate(layoutInflater)
-		val view = binding.root
-		setContentView(view)
+		setContentView(binding.root)
+  
 		val gson = Gson()
-		
 		val myData = gson.fromJson(intent.getStringExtra("item"), ImageModelItem::class.java)
-		val parcelableList: List<ImageModelItem>? = intent.getParcelableArrayListExtra("IMAGE_LIST")
-//        val imageList: List<ImageModelItem> = parcelableList.map { it as ImageModelItem }
+		val parcelableList: List<ImageModelItem>? = intent
+            .getParcelableArrayListExtra("IMAGE_LIST")
 		
-		if (!parcelableList.isNullOrEmpty()) {
-			itemList.addAll(parcelableList)
-		}
+		if (!parcelableList.isNullOrEmpty()) itemList.addAll(parcelableList)
+		
 
-//        val viewPager = findViewById<ViewPager>(R.id.viewPagerItemHolder)
 		val viewPager = binding.viewPagerItemHolder
 
-//        itemList = parcelableList
 		val mViewPagerAdapter = ViewPageAdapter(this, itemList)
-		viewPager.adapter = mViewPagerAdapter
+		
+        viewPager.adapter = mViewPagerAdapter
 		mViewPagerAdapter.notifyDataSetChanged()
-//        Log.d("mydata",myData.toString())
+  
 		val currPage = myData.id?.toInt() ?: 0
-//        while (currPage != null && currPage > (viewPager.adapter?.count ?: 0)) {
-//            // Sleep for some time to avoid excessive CPU usage
-//            Thread.sleep(100)
-//        }
-//        viewPager.post {
-//            if (currPage != null) {
-//                viewPager.setCurrentItem(currPage, false)
-//            }
-//        }
 		viewPager.setCurrentItem(currPage, false)
-		
-		
 	}
 }
