@@ -1,86 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="0dp"
-    android:layout_marginBottom="2dp"
-    android:padding="10dp">
-
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="ImageContrastCheck" />
-
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="0dp"
+	android:layout_marginBottom="2dp"
+	android:padding="10dp">
+	
+	<ImageView
+		android:id="@+id/image1"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/app_name"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/ic_launcher_background"
+		tools:ignore="ImageContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_centerHorizontal="false"-->
-<!--    android:layout_centerVertical="false"-->
-<!--    android:animateLayoutChanges="true"-->
-<!--    android:background="@color/design_default_color_on_primary"-->
-<!--    android:backgroundTint="@color/white"-->
-<!--    android:backgroundTintMode="multiply"-->
-<!--    android:clickable="true"-->
-<!--    android:focusable="true"-->
-<!--    app:cardCornerRadius="8dp"-->
-<!--    app:cardElevation="8dp"-->
-<!--    app:cardMaxElevation="8dp"-->
-<!--    app:cardUseCompatPadding="true"-->
-<!--    app:layout_collapseMode="none">-->
 
-
-<!--    &lt;!&ndash;    <LinearLayout&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:backgroundTintMode="add"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:clickable="true"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:focusable="true"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:focusableInTouchMode="true"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:gravity="center"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
-<!--    &lt;!&ndash;        android:padding="8dp">&ndash;&gt;-->
-
-<!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:id="@+id/name"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:text="@string/loading"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:textAppearance="@style/TextAppearance.AppCompat.Large"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/image"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:contentDescription="@string/app_name"-->
-<!--        app:srcCompat="@drawable/ic_launcher_background"-->
-<!--        tools:ignore="ImageContrastCheck" />-->
-
-<!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:id="@+id/imgId"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:gravity="center_horizontal|center_vertical"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:text="@string/img_id"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:textAppearance="@style/TextAppearance.AppCompat.Large"&ndash;&gt;-->
-<!--    &lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
-<!--    &lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
-<!--</androidx.cardview.widget.CardView>-->
 
 

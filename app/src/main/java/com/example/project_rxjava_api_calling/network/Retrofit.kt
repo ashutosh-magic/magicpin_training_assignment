@@ -1,4 +1,4 @@
-package com.example.project_rxjava_api_calling.Network
+package com.example.project_rxjava_api_calling.network
 
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient

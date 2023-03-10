@@ -1,4 +1,4 @@
-package com.example.project_rxjava_api_calling.Model
+package com.example.project_rxjava_api_calling.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
