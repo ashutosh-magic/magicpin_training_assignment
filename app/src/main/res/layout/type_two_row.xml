@@ -29,12 +29,16 @@
     <ImageView
         android:id="@+id/image2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="144dp"
+        android:layout_marginBottom="10dp"
         android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/IndexText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/image_placeholder"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@drawable/image_placeholder" />
 </androidx.constraintlayout.widget.ConstraintLayout>

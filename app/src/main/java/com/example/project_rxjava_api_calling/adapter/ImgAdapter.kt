@@ -1,6 +1,7 @@
 package com.example.project_rxjava_api_calling.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -11,6 +12,8 @@ import com.example.project_rxjava_api_calling.model.ImageModelItem
 import com.example.project_rxjava_api_calling.model.WrapImageModelItem
 import com.example.project_rxjava_api_calling.databinding.TypeOneRowBinding
 import com.example.project_rxjava_api_calling.databinding.TypeTwoRowBinding
+import com.example.project_rxjava_api_calling.model.ExternalModelItem
+import kotlin.math.log
 
 private const val VIEW_TYPE_ONE = 1
 //private const val VIEW_TYPE_TWO = 2
@@ -21,7 +24,7 @@ class ImgAdapter(
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 	
 	private val imgList: MutableList<WrapImageModelItem> = mutableListOf()
-	
+	private val extItemList: MutableList<ExternalModelItem> = mutableListOf()
 	fun setData(imgList: List<ImageModelItem>) {
 		this.imgList.clear()
 		
@@ -30,6 +33,13 @@ class ImgAdapter(
 				.add(WrapImageModelItem(if (index % 4 == 0) 2 else 1, img))
 		}
 		this.notifyItemChanged(0, this.imgList.size)
+	}
+	
+	fun setExternalData(extImgList: List<ExternalModelItem>) {
+		this.extItemList.clear()
+		
+		extImgList.forEach { this.extItemList.add(it) }
+		this.notifyItemChanged(0, this.extItemList.size)
 	}
 	
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -47,21 +57,36 @@ class ImgAdapter(
 	}
 	
 	override fun getItemCount(): Int {
-		return imgList.size
+//		return imgList.size
+		return extItemList.size
 	}
 	
 	override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+//		Log.d("temp","$extItemList ")
+//		val img = imgList[position]
 		
-		val img = imgList[position]
+//		if (img.viewType == VIEW_TYPE_ONE && holder is ImgView1Holder) {
+//			Glide.with(context).load(img.apiData.download_url).into(holder.image)
+//			holder.image.setOnClickListener { onClick(img.apiData) }
+//		} else if (holder is ImgView2Holder) {
+//			"$position external storage".also { holder.imgId.text = it }
+//			Glide.with(context).load(extItemList[0].filePath).into(holder.image)
+//			holder.image.setOnClickListener { onClick(img.apiData) }
+//		}
 		
-		if (img.viewType == VIEW_TYPE_ONE && holder is ImgView1Holder) {
-			Glide.with(context).load(img.apiData.download_url).into(holder.image)
-			holder.image.setOnClickListener { onClick(img.apiData) }
-		} else if (holder is ImgView2Holder) {
-			holder.imgId.text = position.toString()
-			Glide.with(context).load(img.apiData.download_url).into(holder.image)
-			holder.image.setOnClickListener { onClick(img.apiData) }
+		if(holder is ImgView2Holder)
+		{
+			val path = extItemList[position].filePath
+			
+			if (path?.endsWith(".gif") == true) {
+				"gif external storage".also { holder.imgId.text = it }
+				Glide.with(holder.itemView).asGif().load(path).into(holder.image)
+			} else {
+				"image external storage".also { holder.imgId.text = it }
+				Glide.with(holder.itemView).load(path).into(holder.image)
+			}
 		}
+		
 	}
 	
 	inner class ImgView1Holder(binding: TypeOneRowBinding) :
@@ -76,6 +101,7 @@ class ImgAdapter(
 	}
 	
 	override fun getItemViewType(position: Int): Int {
-		return imgList[position].viewType
+//	   return imgList[position].viewType
+	return 2
 	}
 }
